@@ -10,7 +10,7 @@
 <br><br><br>
 <img src="Playerly/Other/Screenshot.png" height="400" align="right" />
 Playerly is a very lightweight Swift app that allows you to select a file (video or movie) from the built in Document Browser, and play it in the native iOS video player. 
-<br>
+<br><br>
 
 I built Playerly because I didn't like the Files app's outdated video player, which was hard to scrub and looked bad, and wanted to gain some experience with accessing the Files app (using `UIDocumentBrowserViewController`) and playing videos (using `AVPlayerViewController` from `AVKit` and `AVFoundation`).
 
