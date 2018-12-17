@@ -8,19 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		B99C5C1C21C79FF900283114 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99C5C1B21C79FF900283114 /* AppDelegate.swift */; };
-		B99C5C1E21C79FF900283114 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99C5C1D21C79FF900283114 /* ViewController.swift */; };
 		B99C5C2121C79FF900283114 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B99C5C1F21C79FF900283114 /* Main.storyboard */; };
 		B99C5C2321C79FFA00283114 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B99C5C2221C79FFA00283114 /* Assets.xcassets */; };
 		B99C5C2621C79FFA00283114 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B99C5C2421C79FFA00283114 /* LaunchScreen.storyboard */; };
 		B99C5C3121C7A16E00283114 /* ErrorThrower.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99C5C3021C7A16E00283114 /* ErrorThrower.swift */; };
 		B99C5C3F21C7A22800283114 /* PullToDismissTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99C5C3D21C7A22800283114 /* PullToDismissTransition.swift */; };
 		B99C5C4021C7A22800283114 /* PullToDismissable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99C5C3E21C7A22800283114 /* PullToDismissable.swift */; };
+		B99C5C4421C7A28200283114 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99C5C4121C7A28100283114 /* Video.swift */; };
+		B99C5C4521C7A28200283114 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99C5C4221C7A28200283114 /* VideoViewController.swift */; };
+		B99C5C4621C7A28200283114 /* VideoBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99C5C4321C7A28200283114 /* VideoBrowserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B99C5C1821C79FF900283114 /* Playerly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Playerly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B99C5C1B21C79FF900283114 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B99C5C1D21C79FF900283114 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B99C5C2021C79FF900283114 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B99C5C2221C79FFA00283114 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B99C5C2521C79FFA00283114 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -29,6 +30,9 @@
 		B99C5C3021C7A16E00283114 /* ErrorThrower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorThrower.swift; sourceTree = "<group>"; };
 		B99C5C3D21C7A22800283114 /* PullToDismissTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToDismissTransition.swift; sourceTree = "<group>"; };
 		B99C5C3E21C7A22800283114 /* PullToDismissable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToDismissable.swift; sourceTree = "<group>"; };
+		B99C5C4121C7A28100283114 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		B99C5C4221C7A28200283114 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		B99C5C4321C7A28200283114 /* VideoBrowserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoBrowserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +66,9 @@
 			isa = PBXGroup;
 			children = (
 				B99C5C1B21C79FF900283114 /* AppDelegate.swift */,
-				B99C5C1D21C79FF900283114 /* ViewController.swift */,
+				B99C5C4321C7A28200283114 /* VideoBrowserViewController.swift */,
+				B99C5C4221C7A28200283114 /* VideoViewController.swift */,
+				B99C5C4121C7A28100283114 /* Video.swift */,
 				B99C5C1F21C79FF900283114 /* Main.storyboard */,
 				B99C5C2421C79FFA00283114 /* LaunchScreen.storyboard */,
 				B99C5C2F21C7A15B00283114 /* Protocols */,
@@ -186,11 +192,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B99C5C1E21C79FF900283114 /* ViewController.swift in Sources */,
 				B99C5C4021C7A22800283114 /* PullToDismissable.swift in Sources */,
 				B99C5C3121C7A16E00283114 /* ErrorThrower.swift in Sources */,
+				B99C5C4521C7A28200283114 /* VideoViewController.swift in Sources */,
 				B99C5C1C21C79FF900283114 /* AppDelegate.swift in Sources */,
 				B99C5C3F21C7A22800283114 /* PullToDismissTransition.swift in Sources */,
+				B99C5C4421C7A28200283114 /* Video.swift in Sources */,
+				B99C5C4621C7A28200283114 /* VideoBrowserViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

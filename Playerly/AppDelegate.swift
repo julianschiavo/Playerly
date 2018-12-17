@@ -2,20 +2,28 @@
 //  AppDelegate.swift
 //  Playerly
 //
-//  Created by Julian Schiavo on 17/12/2018.
+//  Created by Julian Schiavo on 14/12/2018.
 //  Copyright © 2018 Julian Schiavo. All rights reserved.
 //
 
 import UIKit
+import MobileCoreServices
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let supportedFileTypes = [String(kUTTypeVideo), String(kUTTypeMovie), String(kUTTypeAudiovisualContent)]
+        let videoBrowserViewController = VideoBrowserViewController(forOpeningFilesWithContentTypes: supportedFileTypes)
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = videoBrowserViewController
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
@@ -39,6 +47,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+
+    func application(_ app: UIApplication, open inputURL: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        // Ensure the URL is a file URL
+        guard inputURL.isFileURL else { return false }
+                
+        // Reveal / import the video at the URL
+        guard let videoBrowserViewController = window?.rootViewController as? VideoBrowserViewController else { return false }
+
+        videoBrowserViewController.revealDocument(at: inputURL, importIfNeeded: true) { (revealedDocumentURL, error) in
+            if let error = error {
+                // Handle the error appropriately
+                print("Failed to reveal the document at URL \(inputURL) with error: '\(error)'")
+                return
+            }
+            
+            // Present the Video View Controller for the revealed URL
+            videoBrowserViewController.playVideo(at: revealedDocumentURL!)
+        }
+
+        return true
     }
 
 
