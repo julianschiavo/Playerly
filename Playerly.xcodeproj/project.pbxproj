@@ -13,6 +13,8 @@
 		B99C5C2321C79FFA00283114 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B99C5C2221C79FFA00283114 /* Assets.xcassets */; };
 		B99C5C2621C79FFA00283114 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B99C5C2421C79FFA00283114 /* LaunchScreen.storyboard */; };
 		B99C5C3121C7A16E00283114 /* ErrorThrower.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99C5C3021C7A16E00283114 /* ErrorThrower.swift */; };
+		B99C5C3F21C7A22800283114 /* PullToDismissTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99C5C3D21C7A22800283114 /* PullToDismissTransition.swift */; };
+		B99C5C4021C7A22800283114 /* PullToDismissable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99C5C3E21C7A22800283114 /* PullToDismissable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		B99C5C2721C79FFA00283114 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B99C5C2D21C7A0C900283114 /* Icon.sketch */ = {isa = PBXFileReference; lastKnownFileType = file; path = Icon.sketch; sourceTree = "<group>"; };
 		B99C5C3021C7A16E00283114 /* ErrorThrower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorThrower.swift; sourceTree = "<group>"; };
+		B99C5C3D21C7A22800283114 /* PullToDismissTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToDismissTransition.swift; sourceTree = "<group>"; };
+		B99C5C3E21C7A22800283114 /* PullToDismissable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToDismissable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 				B99C5C2421C79FFA00283114 /* LaunchScreen.storyboard */,
 				B99C5C2F21C7A15B00283114 /* Protocols */,
 				B99C5C2E21C7A0FE00283114 /* Other */,
+				B99C5C3A21C7A22800283114 /* Open Source Code */,
 			);
 			path = Playerly;
 			sourceTree = "<group>";
@@ -83,6 +88,31 @@
 				B99C5C3021C7A16E00283114 /* ErrorThrower.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		B99C5C3A21C7A22800283114 /* Open Source Code */ = {
+			isa = PBXGroup;
+			children = (
+				B99C5C3B21C7A22800283114 /* benguild */,
+			);
+			path = "Open Source Code";
+			sourceTree = "<group>";
+		};
+		B99C5C3B21C7A22800283114 /* benguild */ = {
+			isa = PBXGroup;
+			children = (
+				B99C5C3C21C7A22800283114 /* PullToDismissTransition */,
+			);
+			path = benguild;
+			sourceTree = "<group>";
+		};
+		B99C5C3C21C7A22800283114 /* PullToDismissTransition */ = {
+			isa = PBXGroup;
+			children = (
+				B99C5C3D21C7A22800283114 /* PullToDismissTransition.swift */,
+				B99C5C3E21C7A22800283114 /* PullToDismissable.swift */,
+			);
+			path = PullToDismissTransition;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,8 +187,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B99C5C1E21C79FF900283114 /* ViewController.swift in Sources */,
+				B99C5C4021C7A22800283114 /* PullToDismissable.swift in Sources */,
 				B99C5C3121C7A16E00283114 /* ErrorThrower.swift in Sources */,
 				B99C5C1C21C79FF900283114 /* AppDelegate.swift in Sources */,
+				B99C5C3F21C7A22800283114 /* PullToDismissTransition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
